@@ -1,6 +1,6 @@
 package Exo2;
 
-public class Wind {
+public class Wind extends Instrument{
     public void play(){
         System.out.println("Wind.play()");
     }
