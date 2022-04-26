@@ -1,3 +1,0 @@
-1.2)
-a)	Oui, car il faudrait faire plusieurs étapes assez longues. L'impacte de rajouter un nouveau instrument est la modification et la création de nouvelles fonctions sur chaque classe. Les classes Orchestra et Music changent
-b)	

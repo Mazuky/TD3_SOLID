@@ -1,0 +1,48 @@
+Exercice 5:
+
+5.1/
+
+Analyse PRU pour Automobile					Respecte?
+L'Automobile se start elle-même					Oui
+L'Automobile se stop elle-même					Oui
+L'Automobile change ses pneus elle-même				Non
+L'Automobile se conduit elle-même				Non
+L'Automobile se lave elle-même					Non
+L'Automobile vérifie son gasoil elle-même			Oui
+L'Automobile a du gasoil elle-même				Oui
+   ________________
+	Personne
+   ________________
+   ________________
+   + changerPneus( pneus: Pneu[automobile]): void
+   + conduire(automobile): void
+   + laver(automobile): void
+   ________________
+
+
+5.2/
+
+Analyse PRU pour Utilisateur					Respect?
+L'Utilisateur vérifie son âge lui-même				Oui
+L'Utilisateur a un âge lui-même					Oui
+L'Utilisateur a un nom lui-même					Oui
+L'Utilisateur valide son e-mail lui-même			Oui
+L'Utilisateur sauve en DataBase lui-même			Non
+L'Utilisateur a un e-mail lui-même				Oui
+   ________________
+	DataBase
+   ________________
+   ________________
+   + sauverEnDataBase(Utilisateur): void
+    ________________
+
+
+5.3/
+
+Analyse PRU pour Modem						Respect?
+Le Modem compose lui-même					Oui
+Le Modem raccroche lui-même					Oui
+Le Modem envoie des characters lui-même				Oui
+Le Modem reçoit des charactères lui-même			Oui
+
+Ici il n'y a pas besoin de créer de nouvelles classes car celle-ci respect le PRU.

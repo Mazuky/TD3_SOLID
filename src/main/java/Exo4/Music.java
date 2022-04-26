@@ -21,7 +21,7 @@ public class Music {
         orchestra.tuneSoprano(violin);
         orchestra.tuneSoprano(flute);
         orchestra.tuneTenor(guitar);
-        orchestra.tuneSoprano(guitar);
+        //orchestra.tuneSoprano(guitar);
         orchestra.tuneAll();
 
     }

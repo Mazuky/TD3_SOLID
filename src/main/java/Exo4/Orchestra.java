@@ -18,10 +18,10 @@ public class Orchestra {
     public void addInstrument(Instrument i){
     instrument.add(i);
     }
-    public void tuneTenor(Soloist i){
+    public void tuneTenor(Tenor i){
         i.playLikeATenor();
     }
-    public void tuneSoprano(Soloist i){
+    public void tuneSoprano(Soprano i){
         i.playLikeASoprano();
     }
 }

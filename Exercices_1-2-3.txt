@@ -1,0 +1,57 @@
+Exercice 1:
+
+1.2/
+	a) Non il n'est pas difficile d'ajouter de nouveaux types d'instrument.	Seul la classe Music changera pour crée les nouveaux objets de type Stringed et la classe Orchestra qui va avoir l'ArrayList stringed en plus, les méthodes supplémentaires tuneStringed(Stringed i) et addStringed(Stringed i) pour ajouter l'instrument Stringed dans la liste.
+
+	b) Non il suffit tout simplement d'ajouter les différents instruments dans un ordre différent pour obtenir une autre musique.
+
+1.3/ Le design n'est pas conforme au principe ouvert/fermé car, la classe Orchestra utilise les classes Wind et Percussion qui sont des classes concrètes et si l'on veut que l'objet Orchestra utilise des intruments différents comme Stringed, on est obligé de modifier l'objet Orchestra.
+1.4/ Le principe de substitution de Liskov n'est pas respecté car, si la classe Brass possède une nouvelle méthode "stop" dans ce cas la classe Wind doit possèder la méthode abstraite "stop" or, cela implique que la classe Woodwind doit aussi implémenter la méthode "stop". 
+Ainsi on se retrouve avec une méthode "stop" qui ne fait rien dans la classe Woodwind.
+Donc la classe dérivée Woodwind n'est pas substituable à la classe mère Wind.
+1.5/ Non, le principe des inversion des dépendances n'est pas respecté car, on peut voir par exemple que la classe Orchestra dépend clairement de l'implémentation des classes Wind et Percussion or, cela est un violation du principe des inversion des dépendances.
+Il aurait fallut à la place utilisé une interface qui permettrait à la classe Orchestra d'implémenté toutes classes qui implémente cette interface.
+
+
+
+Exercice 2:
+
+2.3/ 
+	a) Non il est beaucoup plus simple d'ajouter de nouveaux types d'instruments. La création de la classe abstraite Instrument et de la méthode abstraite play nous à permit de plus avoir des déclarations de liste et de méthodes spécifique à chaque classe dans la classe Orchestra, une unique liste générique et des méthodes génériques sont crées pouvant être utiliser pour toute les nouvelles classes d'instruments.
+
+	b) Non il suffit tout simplement d'ajouter les différents instruments dans un ordre différent pour obtenir une autre musique.
+
+2.4/ Oui car, maintenant nous manipulons une classe d'abstraite fixée qui est Instrument, ce qui nous permet de pouvoir avoir de nouveau comportement en créant de nouvelles classe qui hérite de Instrument sans devoir modifier la classe Orchestra.
+2.5/ Non, le principe de substitution de Liskov n'est pas respecté pour les mêmes raisons que dans l'exercice 1
+2.6/ Non, le principe des inversion des dépendances n'est pas respecté, car la classe Orchestra ne travail avec aucune interface.
+Néanmoins nous pouvons voir que toutes les classes qui hérite de la classe abstraite Instrument peuvent être utilisées dans la classe Orchestra ce qui est similaire au principe des inversion des dépendances.
+
+
+
+Exercice 3:
+
+3.9/ Pour l'afficher nous devons absolument ajouter la classe tuneSoprano(Guitar) et tuneTenor(Guitar) dans musique.
+3.10/ 
+	a) Non il est beaucoup plus simple d'ajouter de nouveaux types d'instruments. Nous avons toujours la classe abstraite Instrument et de la méthode abstraite play nous à permit de plus avoir des déclarations de liste et de méthodes spécifique à chaque classe dans la classe Orchestra, une unique liste générique et des méthodes génériques sont crées pouvant être utiliser pour toute les nouvelles classes d'instruments.
+	   La seule classe qui va changer est la classe Music. 
+
+	b) Non il suffit tout simplement d'ajouter les différents instruments dans un ordre différent pour obtenir une autre musique.
+
+3.11/ Oui, le principe ouvert/fermé est pas respecté car la classe Orchestra ne doit pas être modifié au moindre ajout d'un Instrument, grâce a la classe abstraite Instrument.
+3.12/ Non, le principe de substitution de Liskov n'est pas respecté pour les mêmes raisons que dans l'exercice 1.
+3.13/ Le principe des inversions des dépendances est respecté car la classe Orchestra intéragit avec l'interface Soloist.
+3.14/ Ici nous avons qu'une interface donc ce principe de ségrégation des interface n'est pas respecté.
+
+
+
+Exercice 4:
+
+4.7/ Il se passe le même résultat que pour l'exercice 3.
+4.9/ 
+	a) Non grâce a la classe abstraite Intrument.
+	
+	b) Comme pour l'exercice 3, seule la classe Music change.
+
+	c) Non, nous devons juste changer l'ordre des instruments.
+
+4.10/ Non, le principe de Liskov n'est toujours pas respecté. En revanche, le principe de ségrégation des interfaces est maintenant respecté, dû a l'existance des deux interfaces Tenor et Soprano.
